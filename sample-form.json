@@ -1,0 +1,182 @@
+[{
+  "title": "Custom Contact Form",
+  "description": "",
+  "labelPlacement": "top_label",
+  "descriptionPlacement": "below",
+  "button": {
+    "type": "text",
+    "text": "Submit",
+    "imageUrl": ""
+  },
+  "fields": [
+    {
+      "type": "text",
+      "id": 1,
+      "label": "Name",
+      "adminLabel": "",
+      "isRequired": false,
+      "size": "medium",
+      "errorMessage": "",
+      "inputs": null,
+      "formId": 63,
+      "pageNumber": 1,
+      "choices": "",
+      "conditionalLogic": "",
+      "displayOnly": ""
+    },
+    {
+      "type": "email",
+      "id": 2,
+      "label": "Email",
+      "adminLabel": "",
+      "isRequired": false,
+      "size": "medium",
+      "errorMessage": "",
+      "inputs": null,
+      "formId": 63,
+      "pageNumber": 1,
+      "choices": "",
+      "conditionalLogic": "",
+      "displayOnly": ""
+    },
+    {
+      "type": "radio",
+      "id": 3,
+      "label": "Subject",
+      "adminLabel": "",
+      "isRequired": false,
+      "size": "medium",
+      "errorMessage": "",
+      "inputs": null,
+      "choices": [
+        {
+          "text": "Information request",
+          "value": "Information request",
+          "isSelected": false,
+          "price": ""
+        },
+        {
+          "text": "Complaint",
+          "value": "Complaint",
+          "isSelected": false,
+          "price": ""
+        },
+        {
+          "text": "Commercial offer",
+          "value": "Commercial offer",
+          "isSelected": false,
+          "price": ""
+        },
+        {
+          "text": "Just saying hello",
+          "value": "Just saying hello",
+          "isSelected": false,
+          "price": ""
+        }
+      ],
+      "labelPlacement": "",
+      "descriptionPlacement": "",
+      "subLabelPlacement": "",
+      "placeholder": "",
+      "calculationFormula": "",
+      "calculationRounding": "",
+      "enableCalculation": "",
+      "disableQuantity": false,
+      "displayAllCategories": false,
+      "inputMask": false,
+      "inputMaskValue": "",
+      "allowsPrepopulate": false,
+      "formId": 63,
+      "pageNumber": 1,
+      "conditionalLogic": "",
+      "displayOnly": ""
+    },
+    {
+      "type": "textarea",
+      "id": 4,
+      "label": "Message",
+      "adminLabel": "",
+      "isRequired": false,
+      "size": "medium",
+      "errorMessage": "",
+      "inputs": null,
+      "formId": 63,
+      "pageNumber": 1,
+      "choices": "",
+      "conditionalLogic": "",
+      "displayOnly": "",
+      "labelPlacement": "",
+      "descriptionPlacement": "",
+      "subLabelPlacement": "",
+      "placeholder": "",
+      "enableCalculation": "",
+      "disableQuantity": false,
+      "displayAllCategories": false,
+      "inputMask": false,
+      "inputMaskValue": "",
+      "allowsPrepopulate": false
+    }
+  ],
+  "useCurrentUserAsAuthor": true,
+  "postContentTemplateEnabled": false,
+  "postTitleTemplateEnabled": false,
+  "postTitleTemplate": "",
+  "postContentTemplate": "",
+  "lastPageButton": null,
+  "pagination": null,
+  "firstPageCssClass": null,
+  "notifications": {
+    "54e1c8d63ca49": {
+      "id": "54e1c8d63ca49",
+      "to": "{admin_email}",
+      "name": "Admin Notification",
+      "event": "form_submission",
+      "toType": "email",
+      "subject": "New submission from {form_title}",
+      "message": "{all_fields}"
+    }
+  },
+  "confirmations": {
+    "54e1c8d63ccb2": {
+      "id": "54e1c8d63ccb2",
+      "name": "Default Confirmation",
+      "isDefault": true,
+      "type": "message",
+      "message": "Thanks for contacting us! We will get in touch with you shortly.",
+      "url": "",
+      "pageId": "",
+      "queryString": ""
+    }
+  },
+  "subLabelPlacement": "below",
+  "cssClass": "",
+  "enableHoneypot": "",
+  "enableAnimation": "",
+  "save": {
+    "enabled": "",
+    "button": {
+      "type": "link",
+      "text": "Save and Continue Later"
+    }
+  },
+  "limitEntries": "",
+  "limitEntriesCount": "",
+  "limitEntriesPeriod": "",
+  "limitEntriesMessage": "",
+  "scheduleForm": "",
+  "scheduleStart": "",
+  "scheduleStartHour": "",
+  "scheduleStartMinute": "",
+  "scheduleStartAmpm": "",
+  "scheduleEnd": "",
+  "scheduleEndHour": "",
+  "scheduleEndMinute": "",
+  "scheduleEndAmpm": "",
+  "schedulePendingMessage": "",
+  "scheduleMessage": "",
+  "requireLogin": "",
+  "requireLoginMessage": "",
+  "is_active": "1",
+  "date_created": "2015-02-16 14:05:37",
+  "is_trash": "0"
+}]
