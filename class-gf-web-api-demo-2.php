@@ -29,7 +29,7 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 		$all_scripts = parent::scripts();
 
 		$settings = $this->get_plugin_settings();
-		if ( empty( $settings ) ){
+		if ( empty( $settings ) ) {
 			return $all_scripts;
 		}
 
@@ -52,8 +52,8 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 						'signed_urls' => array(
 							'get_entries' => $this->get_signed_url( 'GET', "forms/{$this->_form_id}/entries" ),
 							'get_results' => $this->get_signed_url( 'GET', "forms/{$this->_form_id}/results" ),
-						)
-					)
+						),
+					),
 				),
 			);
 			$all_scripts = array_merge( $all_scripts, $scripts );
@@ -62,8 +62,8 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 		return $all_scripts;
 	}
 
-	private function get_api_url(){
-		return trailingslashit( $this->get_plugin_setting( 'api_url' ) ) . '/gravityformsapi/';
+	private function get_api_url() {
+		return trailingslashit( $this->get_plugin_setting( 'api_url' ) ) . 'gravityformsapi/';
 	}
 
 	private function get_signed_url( $method, $route, $expires = '+12 hours' ) {
@@ -91,7 +91,7 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 
 	public function plugin_page() {
 
-		$api_url = $this->get_api_url();
+		$api_url = $this->get_plugin_setting( 'api_url' );
 
 		if ( empty( $api_url ) ) {
 			$settings_page = admin_url( 'admin.php?page=gf_settings&subview=gravityformswebapidemo2' );
@@ -116,7 +116,7 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 				$body = json_decode( $body_json );
 				$form_ids = $body->response;
 				$form_id = $form_ids[0];
-				if ( $form_id > 1 ){
+				if ( $form_id > 1 ) {
 					update_option( 'gf_api_demo_2_form_id' , $form_id );
 					$this->_form_id = $form_id;
 				}
@@ -180,7 +180,7 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 	<?php
 	}
 
-	function plugin_settings_fields(){
+	function plugin_settings_fields() {
 		return array(
 			array(
 				'title' => 'Authentication',
@@ -188,7 +188,7 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 				'fields' => array(
 					array(
 						'name'              => 'api_url',
-						'label'             => 'API Url',
+						'label'             => 'Site Url',
 						'type'              => 'text',
 						'class'             => 'medium',
 					),
@@ -209,7 +209,7 @@ class GF_Web_Api_Demo_2 extends GFAddOn {
 		);
 	}
 
-	function uninstall(){
+	function uninstall() {
 		delete_option( 'gf_api_demo_2_form_id' );
 	}
 
